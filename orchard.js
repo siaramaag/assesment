@@ -54,6 +54,7 @@ let fujiTotalAcres = 0;
 let galaTotalAcres = 0;
 let pinkTotalAcres = 0;
 
+//finding totals for each type of apple
 for (let i = 0; i < fujiAcres.length; i++) {
     fujiTotalAcres += fujiAcres[i];
 }
@@ -66,6 +67,7 @@ for (let i = 0; i < pinkAcres.length; i++) {
     pinkTotalAcres += pinkAcres[i];
 }
 
+//total of all types of apples
 let totalAcres = fujiTotalAcres + galaTotalAcres + pinkTotalAcres;
 
 console.log(totalAcres);
@@ -85,7 +87,7 @@ console.log(totalAcres);
 */
 
 // CODE HERE
-
+//calculating daily average
 let averageDailyAcres = totalAcres / 21;
 
 console.log(averageDailyAcres);
@@ -125,6 +127,7 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
+//calculating how many days of work are left
 while (acresLeft > 0) {
     days++;
     acresLeft - averageDailyAcres;
@@ -158,7 +161,7 @@ console.log(days);
 */
 
 // CODE HERE
-
+//converting acres into tons of apples
 let fujiTons = fujiAcres.slice(0, 6);
 for (let i = 0; i < fujiTons.length; i++) {
     fujiTons[i] *= 6.5;
@@ -171,7 +174,7 @@ for (let i = 0; i < galaTons.length; i++) {
 }
 console.log(galaTons);
 
-let pinkTons = pinkAcres.splice(0, 6);
+let pinkTons = pinkAcres.slice(0, 6);
 for (let i = 0; i < pinkTons.length; i++) {
     pinkTons[i] *= 6.5;
 }
@@ -201,6 +204,7 @@ let fujiTotalTons = 0;
 let galaTotalTons = 0;
 let pinkTotalTons = 0;
 
+//calculating sum of tons for each apple type
 for (let i = 0; i < fujiTons.length; i++) {
     fujiTotalTons += fujiTons[i];
 }
@@ -213,6 +217,7 @@ for (let i = 0; i < pinkTons.length; i++) {
     pinkTotalTons += pinkTons[i];
 }
 
+//converting tons into pounds
 let fujiPounds = fujiTotalTons * 2000;
 console.log(fujiPounds);
 
@@ -245,7 +250,7 @@ console.log(pinkPounds);
 */
 
 // CODE HERE
-
+//calculating profit of apples per pound
 let fujiProfit = fujiPounds * fujiPrice;
 console.log(fujiProfit);
 
@@ -271,5 +276,6 @@ console.log(pinkProfit);
 */
 
 // CODE HERE
+//calculating total profit of all apple types
 let totalProfit = fujiProfit + galaProfit + pinkProfit;
 console.log(totalProfit);
